@@ -64,9 +64,7 @@ Run these steps in PowerShell, in order.
     python -m pip install python-docx lxml
 ````
 
-> **Note:** The global Python installation runs the build scripts. The [`uv` virtual environment from above](#python-local-virtual-environment-setup) is separate and used for Jupyter and data analysis.
->
-> **Warning:** The Node.js route is heavy. Node.js, the additional build tools, and Puppeteer's browser together take roughly 7 GB of disk space. If that is too much, see [Optional: Rendering Diagrams Without Node.js](#optional-rendering-diagrams-without-nodejs).
+> **Warning:** The Node.js route is heavy. Node.js, the additional build tools, and Puppeteer's browser together take roughly 7 GB of disk space. If that is too much, see [Optional: Rendering Diagrams Without Node.js](#optional-rendering-diagrams-without-node.js).
 
 | Tool                               | Purpose                                        |
 |------------------------------------|------------------------------------------------|
@@ -505,7 +503,4 @@ The key (i.e. `smith2023`) must match an entry key in `references.bib`.
 | Empty table of contents                                                 | Fields not yet updated                                 | Press `F9` (LibreOffice) or accept the update prompt (Word)                                       |
 | Grey highlight on page numbers                                          | LibreOffice field shading                              | Toggle it in **View > Field Shadings**                                                            |
 | `rsvg-convert` warning in DOCX                                          | Optional SVG converter missing                         | Safe to ignore                                                                                    |
-| `git-remote-gcrypt` not found in Git Bash                               | The helper is in Git's helper folder, not on `PATH`    | Expected. Test with `git remote-gcrypt --version`, or just push                                   |
-| `unable to find remote helper for 'gcrypt'`                             | Script has the wrong name or CRLF line endings         | Re-download the raw file, name it exactly `git-remote-gcrypt`, and copy it to Git's helper folder |
 | `gpg: WARNING: nothing exported`                                        | A placeholder was used instead of the real fingerprint | Run `gpg --list-secret-keys --keyid-format long --fingerprint` and use the real value             |
-| `remote HEAD refers to nonexistent ref` and an empty folder after clone | git-remote-gcrypt does not tell Git the default branch | Clone with `-b main`, or run `git checkout main`                                                  |
