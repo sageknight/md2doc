@@ -1,0 +1,11 @@
+{
+    "layout": "dagre",
+    "theme": "default",
+    "look": "classic",
+    "htmlLabels": false,
+    "flowchart": {
+        "curve": "basis",
+        "nodeSpacing": 50,
+        "rankSpacing": 50
+    }
+}
