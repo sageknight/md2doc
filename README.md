@@ -33,36 +33,36 @@ Run these steps in PowerShell, in order.
 
 1. Install Pandoc and Typst:
 
-````powershell
-    winget install JohnMacFarlane.Pandoc
-    winget install --id Typst.Typst
-````
+    ````powershell
+        winget install JohnMacFarlane.Pandoc
+        winget install --id Typst.Typst
+    ````
 
-1. Install **Node.js** (LTS) from [nodejs.org](https://nodejs.org/). In the installer, tick **Automatically install the necessary tools**. This also installs a global Python. If you already installed Node.js without it, run **Install Additional Tools for Node.js** from the Start menu instead.
+2. Install **Node.js** (LTS) from [nodejs.org](https://nodejs.org/). In the installer, tick **Automatically install the necessary tools**. This also installs a global Python. If you already installed Node.js without it, run **Install Additional Tools for Node.js** from the Start menu instead.
 
-2. Close and reopen PowerShell, then confirm everything is on your `PATH`:
+3. Close and reopen PowerShell, then confirm everything is on your `PATH`:
 
-````powershell
-    node --version
-    npm --version
-    python --version
-````
+    ````powershell
+        node --version
+        npm --version
+        python --version
+    ````
 
-1. If npm prints an update notice, run the `npm install -g npm@...` command it shows. This step is optional.
+- If npm prints an update notice, run the `npm install -g npm@...` command it shows. This step is optional.
 
-2. Allow Puppeteer's install script to run, then install Mermaid CLI:
+- Allow Puppeteer's install script to run, then install Mermaid CLI:
 
-````powershell
-    npm config set allow-scripts puppeteer --location=user
-    npm install -g @mermaid-js/mermaid-cli
-````
+    ````powershell
+        npm config set allow-scripts puppeteer --location=user
+        npm install -g @mermaid-js/mermaid-cli
+    ````
 
-1. Install the Python packages used by `build_design_system.py`:
+- Install the Python packages used by `build_design_system.py`:
 
-````powershell
-    python -m pip install --upgrade pip
-    python -m pip install python-docx lxml
-````
+    ````powershell
+        python -m pip install --upgrade pip
+        python -m pip install python-docx lxml
+    ````
 
 > **Warning:** The Node.js route is heavy. Node.js, the additional build tools, and Puppeteer's browser together take roughly 7 GB of disk space. If that is too much, see [Optional: Rendering Diagrams Without Node.js](#optional-rendering-diagrams-without-node.js).
 
