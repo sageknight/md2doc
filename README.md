@@ -1,9 +1,12 @@
 # md2doc
 Markdown to PDF,DOCX,ODT,HTML python scripts to make pandoc outputs look nice
 
-Pandoc uses template files to format and style the documents.
+## Why should you use this?
+By default, pandoc's output looks terrible. Pandoc also relies on other packages like Typst to render pdfs. This tool wraps around pandoc to output mermaid diagrams, pdf, docx, odt, and html files beautifully and automatically. Markdown text files are becoming ever more important as it is the language that AI programs use. Furthermore, with this workflow, you don't need expensive programs like Microsoft Word and don't need to spend hours formatting your text. You can preformat and just type using any plain text editor and it will be rendered beautifully automatically! This README guides you through setup and implementation of this tool.
 
 ## Section 1: Template Creation
+
+Pandoc uses template files to format and style the documents.
 
 This workflow turns Markdown into consistently styled PDF, Word (`.docx`), OpenDocument (`.odt`), and HTML documents. Markdown remains the editable source. `publish.py` runs the whole build, `render_mermaid.py` turns Mermaid code into images, Pandoc converts the document, and `build_design_system.py` creates the templates that keep styling consistent. This section sets up the toolchain and explains how the templates are generated.
 
